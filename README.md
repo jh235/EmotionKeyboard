@@ -16,7 +16,7 @@
 ## 使用方法
 ### 提供4种创建方法
 ```
-  EmotionKeyboard *emotionKeyBoard = [[EmotionKeyboard alloc]initWithFrame:CGRectMake(0, ScreenH - 235, ScreenW, 235)];
+    EmotionKeyboard *emotionKeyBoard = [[EmotionKeyboard alloc]initWithFrame:CGRectMake(0, ScreenH - 235, ScreenW, 235)];
     
     EmotionKeyboard *emotionKeyBoard = [[EmotionKeyboard alloc]init];
     
@@ -26,8 +26,11 @@
 ```
 <li>initWithFrame: 可自己指定键盘大小 已经做适配 默认为有四个选项 
 <li>init: 默认Frame为 CGRectMake(0, ScreenH - 216, ScreenW, 216) 默认为有四个选项 
-<li>initWithDefault: 默认Frame为 CGRectMake(0, ScreenH - 216, ScreenW, 216) 只有默认的小表情 
 <li>sharedEmotionKeyboardView:单利模式 默认Frame为 CGRectMake(0, ScreenH - 216, ScreenW, 216) 默认为有四个选项
+
+<li>initWithDefault: 默认Frame为 CGRectMake(0, ScreenH - 216, ScreenW, 216) 只有默认的小表情 <br/>
+<img src="./3.png" width="320"><br/>
+
 
 默认创建大小自己可修改
 
