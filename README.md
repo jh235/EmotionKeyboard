@@ -16,13 +16,13 @@
 ## 使用方法
 ### 提供4种创建方法
 ```
-    EmotionKeyboard *emotionKeyBoard = [[EmotionKeyboard alloc]initWithFrame:CGRectMake(0, ScreenH - 235, ScreenW, 235)];
+    EmotionKeyboard *emotionKeyboard = [[EmotionKeyboard alloc]initWithFrame:CGRectMake(0, ScreenH - 235, ScreenW, 235)];
     
-    EmotionKeyboard *emotionKeyBoard = [[EmotionKeyboard alloc]init];
+    EmotionKeyboard *emotionKeyboard = [[EmotionKeyboard alloc]init];
     
-    EmotionKeyboard *emotionKeyBoard = [[EmotionKeyboard alloc]initWithDefault];
+    EmotionKeyboard *emotionKeyboard = [[EmotionKeyboard alloc]initWithDefault];
     
-    EmotionKeyboard *emotionKeyBoard = [EmotionKeyboard sharedEmotionKeyboardView];
+    EmotionKeyboard *emotionKeyboard = [EmotionKeyboard sharedEmotionKeyboardView];
 ```
 <li>initWithFrame: 可自己指定键盘大小 已经做适配 默认为有四个选项 
 <li>init: 默认Frame为 CGRectMake(0, ScreenH - 216, ScreenW, 216) 默认为有四个选项 
