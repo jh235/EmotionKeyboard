@@ -85,20 +85,21 @@
 ### 具体使用方法 --参考demo
 
 ```
-    UITextField *text = [[UITextField alloc]initWithFrame:CGRectMake(10, 200, 300, 44)];
-    text.backgroundColor = [UIColor lightGrayColor];
-
-//    EmotionKeyboard *emotionKeyBoard = [[EmotionKeyboard alloc]initWithFrame:CGRectMake(0, ScreenH - 235, ScreenW, 235)];
+    UITextField *textField = [[UITextField alloc]initWithFrame:CGRectMake(20, 200, 360, 44)];
+    textField.backgroundColor = [UIColor lightGrayColor];
     
-//    EmotionKeyboard *emotionKeyBoard = [[EmotionKeyboard alloc]init];
+//  EmotionKeyboard *emotionKeyBoard = [[EmotionKeyboard alloc]initWithFrame:CGRectMake(0, ScreenH - 235, ScreenW, 235)];
     
-//    EmotionKeyboard *emotionKeyBoard = [[EmotionKeyboard alloc]initWithDefault];
+//  EmotionKeyboard *emotionKeyBoard = [[EmotionKeyboard alloc]init];
+    
+//  EmotionKeyboard *emotionKeyBoard = [[EmotionKeyboard alloc]initWithDefault];
     
     EmotionKeyboard *emotionKeyBoard = [EmotionKeyboard sharedEmotionKeyboardView];
     emotionKeyBoard.delegate = self;
-    text.inputView = emotionKeyBoard;
-    _textFild = text;
-
+    textField.inputView = emotionKeyBoard;
+    _textField = textField;
+    
+    
 // FaceBoardDelegateMethods
 
 /**
@@ -107,7 +108,7 @@
 - (void)emoticonInputDidTapBackspace
 {
     NSString* inputString;
-    inputString =  _textFild.text;
+    inputString =  _textField.text;
     NSString* string = nil;
     NSInteger stringLength = inputString.length;
     
@@ -136,7 +137,7 @@
             string = [inputString substringToIndex:stringLength - 1];
         }
     }
-    [_textFild setText:string];
+    [_textField setText:string];
     
 }
 
@@ -156,7 +157,7 @@
  */
 - (void)emoticonInputDidTapText:(NSString*)text
 {
-    [_textFild insertText:text];
+    [_textField insertText:text];
 }
 /**
  *  获取图片表情对应的url

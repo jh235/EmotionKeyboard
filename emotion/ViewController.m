@@ -14,7 +14,7 @@
 
 @interface ViewController ()<EmoticonViewDelegate>
 
-@property(nonatomic, weak)UITextField *textFild;
+@property(nonatomic, weak)UITextField *textField;
 
 @end
 
@@ -22,8 +22,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    UITextField *text = [[UITextField alloc]initWithFrame:CGRectMake(20, 200, 360, 44)];
-    text.backgroundColor = [UIColor lightGrayColor];
+    UITextField *textField = [[UITextField alloc]initWithFrame:CGRectMake(20, 200, 360, 44)];
+    textField.backgroundColor = [UIColor lightGrayColor];
     
     UIButton *btn = [[UIButton alloc]initWithFrame:CGRectMake(20, 300, 80, 40)];
     [btn setTitle:@"添加收藏" forState:UIControlStateNormal];
@@ -41,10 +41,10 @@
     
     EmotionKeyboard *emotionKeyBoard = [EmotionKeyboard sharedEmotionKeyboardView];
     emotionKeyBoard.delegate = self;
-    text.inputView = emotionKeyBoard;
-    _textFild = text;
+    textField.inputView = emotionKeyBoard;
+    _textField = textField;
     
-    [self.view addSubview:text];
+    [self.view addSubview:textField];
     
     
 }
@@ -72,7 +72,7 @@
 - (void)emoticonInputDidTapBackspace
 {
     NSString* inputString;
-    inputString =  _textFild.text;
+    inputString =  _textField.text;
     NSString* string = nil;
     NSInteger stringLength = inputString.length;
     
@@ -101,7 +101,7 @@
             string = [inputString substringToIndex:stringLength - 1];
         }
     }
-    [_textFild setText:string];
+    [_textField setText:string];
     
 }
 
@@ -121,7 +121,7 @@
  */
 - (void)emoticonInputDidTapText:(NSString*)text
 {
-    [_textFild insertText:text];
+    [_textField insertText:text];
 }
 /**
  *  获取图片表情对应的url
