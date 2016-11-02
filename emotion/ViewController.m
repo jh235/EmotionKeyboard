@@ -8,7 +8,6 @@
 
 #import "EmotionKeyboard.h"
 #import "EmotionTool.h"
-#import "NSString+Emoji.h"
 #import "ViewController.h"
 
 @interface ViewController () <EmoticonViewDelegate>

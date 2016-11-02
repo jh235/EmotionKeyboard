@@ -62,6 +62,8 @@ typedef NS_ENUM(NSUInteger, EmoticonType) {
  */
 @property (nonatomic, assign) BOOL isDefault;
 
++(instancetype)EmotionWithDict:(NSDictionary *)dict;
+
 @end
 
 

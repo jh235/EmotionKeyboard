@@ -81,6 +81,8 @@
  */
 + (void)delectCollectImage:(NSString *)url;
 
++ (UIImage *)emotionImageWithName:(NSString *)name;
+
 
 
 @end

@@ -8,7 +8,6 @@
 
 #import "EmotionTool.h"
 #import "EmotionModel.h"
-#import "MJExtension.h"
 
 //最新表情的路径
 #define RECENTEMOTIONS_PAHT [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject] stringByAppendingPathComponent:@"recentemotions.archive"]
@@ -47,7 +46,6 @@ static NSMutableArray *_collectImages;
 
 + (EmotionModel *)emotionWithChs:(NSString *)chs{
     
-    
     //先遍历默认表情
     NSArray *defaultEmotions = [self defaultEmotions];
     for (EmotionModel *emotion in defaultEmotions) {
@@ -56,7 +54,6 @@ static NSMutableArray *_collectImages;
         }
     }
     
-    //再遍历浪小花表情
     NSArray *magicEmotions = [self magicEmotions];
     for (EmotionModel *emotion in magicEmotions) {
         if ([emotion.chs isEqualToString:chs]) {
@@ -122,37 +119,70 @@ static NSMutableArray *_collectImages;
 }
 
 
++ (NSArray *)loadResourceWithName:(NSString *)name{
+    
+    NSString *bundlePath = [[NSBundle mainBundle]pathForResource:@"EmotionIcons.bundle" ofType:nil];
+    NSBundle *bundle = [NSBundle bundleWithPath:bundlePath];
+    NSString *path = [bundle pathForResource:[NSString stringWithFormat:@"%@/info.plist",name] ofType:@""];
+
+    NSArray *array = [NSArray arrayWithContentsOfFile:path];
+    
+    return array;
+}
+
++ (UIImage *)emotionImageWithName:(NSString *)name{
+    
+    NSString *bundlePath = [[NSBundle mainBundle]pathForResource:@"EmotionIcons.bundle" ofType:nil];
+    NSBundle *bundle = [NSBundle bundleWithPath:bundlePath];
+    
+    NSString *path = [bundle pathForResource:[NSString stringWithFormat:@"%@@2x.png",name] ofType:@""];
+    
+    return [UIImage imageWithContentsOfFile:path];
+}
+
+
 + (NSArray *)defaultEmotions{
     //读取默认表情
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"EmotionIcons/default/info.plist" ofType:@""];
-    NSArray *emotions = [EmotionModel objectArrayWithFile:path];
+    NSArray *array = [self loadResourceWithName:@"default"];
+    NSMutableArray *arrayM = [NSMutableArray array];
     
+    for (NSDictionary *dict in array) {
+        EmotionModel *model = [EmotionModel EmotionWithDict:dict];
+        [arrayM addObject:model];
+    }
     //给集合里面每一个元素都执行某个方法
-    [emotions makeObjectsPerformSelector:@selector(setPath:) withObject:@"EmotionIcons/default/"];
+    [arrayM makeObjectsPerformSelector:@selector(setPath:) withObject:@"EmotionIcons.bundle/default/"];
     
-    return emotions;
+    return arrayM;
 }
 
 + (NSArray *)emojiEmotions{
-    //读取默认表情
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"EmotionIcons/emoji/info.plist" ofType:@""];
-    NSArray *emotions = [EmotionModel objectArrayWithFile:path];
+    //读取emoji表情
+    NSArray *array = [self loadResourceWithName:@"emoji"];
     
-    return emotions;
+    NSMutableArray *arrayM = [NSMutableArray array];
+    
+    for (NSDictionary *dict in array) {
+        EmotionModel *model = [EmotionModel EmotionWithDict:dict];
+        [arrayM addObject:model];
+    }
+    return arrayM;
 }
-
 
 + (NSArray *)magicEmotions{
-    //读取默认表情
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"EmotionIcons/GifEmoji/info.plist" ofType:@""];
-    NSArray *emotions = [EmotionModel objectArrayWithFile:path];
+    //读取大表情
+    NSArray *array = [self loadResourceWithName:@"GifEmoji"];
     
+    NSMutableArray *arrayM = [NSMutableArray array];
+    
+    for (NSDictionary *dict in array) {
+        EmotionModel *model = [EmotionModel EmotionWithDict:dict];
+        [arrayM addObject:model];
+    }
     //给集合里面每一个元素都执行某个方法
-    [emotions makeObjectsPerformSelector:@selector(setPath:) withObject:@"EmotionIcons/GifEmoji/"];
-    return emotions;
+    [arrayM makeObjectsPerformSelector:@selector(setPath:) withObject:@"EmotionIcons.bundle/GifEmoji/"];
+    return arrayM;
 }
-
-
 
 + (void)delectCollectImage:(NSString *)url{
     
@@ -161,7 +191,5 @@ static NSMutableArray *_collectImages;
     [[NSNotificationCenter defaultCenter]postNotificationName:@"delectCollectImage" object:nil];
     
 }
-
-
 
 @end

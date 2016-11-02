@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "NSString+Emoji.h"
 
 /**
  *  屏幕宽度

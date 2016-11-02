@@ -10,7 +10,6 @@
 #import "UIView+Extension.h"
 #import "EmotionModel.h"
 #import "UIButton+RemoveHighlightEffect.h"
-#import "NSString+Emoji.h"
 #import "EmotionTool.h"
 
 
@@ -65,7 +64,8 @@ typedef NS_ENUM(NSUInteger, EmotionToolBarButtonType) {
         UIButton *deleteBtn = [[UIButton alloc] init];
         
         //设置图片
-        [deleteBtn setImage:[UIImage imageNamed:@"compose_photo_close"] forState:UIControlStateNormal];
+//        [deleteBtn setImage:[UIImage imageNamed:@"compose_photo_close"] forState:UIControlStateNormal];
+        [deleteBtn setImage:[EmotionTool emotionImageWithName:@"compose_photo_close"] forState:UIControlStateNormal];
         //设置大小
         deleteBtn.size = [deleteBtn currentImage].size;
         
@@ -293,7 +293,8 @@ typedef NS_ENUM(NSUInteger, EmotionToolBarButtonType) {
     [button setBackgroundColor:[UIColor whiteColor]];
     
     //    [button setBackgroundImage:[UIImage imageNamed:[NSString stringWithFormat:@"compose_emotion_table_%@_selected",bgImageName]] forState:UIControlStateDisabled];
-    [button setBackgroundImage:[UIImage imageNamed:@"emoticon_keyboard_background"] forState:UIControlStateDisabled];
+    [button setBackgroundImage:[EmotionTool emotionImageWithName:@"emoticon_keyboard_background"] forState:UIControlStateDisabled];
+    
     
     
     //设置选中状态字体颜色
@@ -398,11 +399,12 @@ typedef NS_ENUM(NSUInteger, EmotionToolBarButtonType) {
         //删除按钮
         UIButton *deleteButton = [[UIButton alloc] init];
         //设置不同状态的图片
-        [deleteButton setImage:[UIImage imageNamed:@"compose_emotion_delete_highlighted"] forState:UIControlStateHighlighted];
-        [deleteButton setImage:[UIImage imageNamed:@"compose_emotion_delete"] forState:UIControlStateNormal];
+        [deleteButton setImage:[EmotionTool emotionImageWithName:@"compose_emotion_delete_highlighted"] forState:UIControlStateHighlighted];
+        [deleteButton setImage:[EmotionTool emotionImageWithName:@"compose_emotion_delete"] forState:UIControlStateNormal];
         //添加删除按钮点击事件
         [deleteButton addTarget:self action:@selector(deleteButtonClick:) forControlEvents:UIControlEventTouchUpInside];
         
+    
         
         [self addSubview:deleteButton];
         self.deleteButton = deleteButton;
@@ -828,8 +830,10 @@ typedef NS_ENUM(NSUInteger, EmotionToolBarButtonType) {
     self = [super initWithFrame:CGRectMake(0, ScreenH - 216, ScreenW, 216)];
     if (self) {
 
-        self.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"emoticon_keyboard_background"]];
+        self.backgroundColor = [UIColor colorWithPatternImage:[EmotionTool emotionImageWithName:@"emoticon_keyboard_background"]];
 //                self.backgroundColor = RGBCOLOR(235, 236, 238);
+        
+        
         
         
         EmotionToolBar *toolBar = [[EmotionToolBar alloc] init];
@@ -869,7 +873,7 @@ typedef NS_ENUM(NSUInteger, EmotionToolBarButtonType) {
     self = [super initWithFrame:CGRectMake(0, ScreenH - 216, ScreenW, 216)];
     if (self) {
         
-        self.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"emoticon_keyboard_background"]];
+        self.backgroundColor = [UIColor colorWithPatternImage:[EmotionTool emotionImageWithName:@"emoticon_keyboard_background"]];
         
         
         EmotionToolBar *toolBar = [[EmotionToolBar alloc] init];
@@ -903,7 +907,7 @@ typedef NS_ENUM(NSUInteger, EmotionToolBarButtonType) {
 {
     self = [super initWithFrame:frame];
     if (self) {
-        self.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"emoticon_keyboard_background"]];
+        self.backgroundColor = [UIColor colorWithPatternImage:[EmotionTool emotionImageWithName:@"emoticon_keyboard_background"]];
         UIView *line = [[UIView alloc]initWithFrame:CGRectMake(0, 0, self.width, 1)];
         line.backgroundColor = [UIColor lightGrayColor];
         
