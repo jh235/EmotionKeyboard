@@ -7,35 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B63D84891DC97EA600FE9FBF /* EmotionIcons.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B63D84881DC97EA600FE9FBF /* EmotionIcons.bundle */; };
 		B6E01F461C562A210028BE48 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B6E01F451C562A210028BE48 /* main.m */; };
 		B6E01F491C562A210028BE48 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B6E01F481C562A210028BE48 /* AppDelegate.m */; };
 		B6E01F4C1C562A210028BE48 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6E01F4B1C562A210028BE48 /* ViewController.m */; };
 		B6E01F4F1C562A210028BE48 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6E01F4D1C562A210028BE48 /* Main.storyboard */; };
 		B6E01F511C562A210028BE48 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6E01F501C562A210028BE48 /* Assets.xcassets */; };
 		B6E01F541C562A210028BE48 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6E01F521C562A210028BE48 /* LaunchScreen.storyboard */; };
-		B6E01F7E1C562A2A0028BE48 /* compose_emotion_delete_highlighted@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B6E01F5D1C562A2A0028BE48 /* compose_emotion_delete_highlighted@2x.png */; };
-		B6E01F801C562A2A0028BE48 /* compose_emotion_delete_highlighted@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B6E01F5F1C562A2A0028BE48 /* compose_emotion_delete_highlighted@3x.png */; };
 		B6E01F821C562A2A0028BE48 /* EmotionKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = B6E01F621C562A2A0028BE48 /* EmotionKeyboard.m */; };
 		B6E01F831C562A2A0028BE48 /* EmotionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B6E01F641C562A2A0028BE48 /* EmotionModel.m */; };
 		B6E01F841C562A2A0028BE48 /* EmotionTool.m in Sources */ = {isa = PBXBuildFile; fileRef = B6E01F661C562A2A0028BE48 /* EmotionTool.m */; };
 		B6E01F8C1C562A2A0028BE48 /* NSString+Emoji.m in Sources */ = {isa = PBXBuildFile; fileRef = B6E01F781C562A2A0028BE48 /* NSString+Emoji.m */; };
 		B6E01F8D1C562A2A0028BE48 /* UIButton+RemoveHighlightEffect.m in Sources */ = {isa = PBXBuildFile; fileRef = B6E01F7A1C562A2A0028BE48 /* UIButton+RemoveHighlightEffect.m */; };
 		B6E01F8E1C562A2A0028BE48 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = B6E01F7C1C562A2A0028BE48 /* UIView+Extension.m */; };
-		B6E01F901C562B7C0028BE48 /* EmotionIcons in Resources */ = {isa = PBXBuildFile; fileRef = B6E01F8F1C562B7C0028BE48 /* EmotionIcons */; };
-		B6E01F931C570B4C0028BE48 /* compose_emotion_delete@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B6E01F911C570B4C0028BE48 /* compose_emotion_delete@2x.png */; };
-		B6E01F941C570B4C0028BE48 /* compose_emotion_delete@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B6E01F921C570B4C0028BE48 /* compose_emotion_delete@3x.png */; };
-		B6EE79911D18EC2800905F4D /* MJConst.m in Sources */ = {isa = PBXBuildFile; fileRef = B6EE79831D18EC2700905F4D /* MJConst.m */; };
-		B6EE79921D18EC2800905F4D /* MJFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = B6EE79861D18EC2700905F4D /* MJFoundation.m */; };
-		B6EE79931D18EC2800905F4D /* MJIvar.m in Sources */ = {isa = PBXBuildFile; fileRef = B6EE79881D18EC2800905F4D /* MJIvar.m */; };
-		B6EE79941D18EC2800905F4D /* MJType.m in Sources */ = {isa = PBXBuildFile; fileRef = B6EE798A1D18EC2800905F4D /* MJType.m */; };
-		B6EE79951D18EC2800905F4D /* NSObject+MJCoding.m in Sources */ = {isa = PBXBuildFile; fileRef = B6EE798C1D18EC2800905F4D /* NSObject+MJCoding.m */; };
-		B6EE79961D18EC2800905F4D /* NSObject+MJIvar.m in Sources */ = {isa = PBXBuildFile; fileRef = B6EE798E1D18EC2800905F4D /* NSObject+MJIvar.m */; };
-		B6EE79971D18EC2800905F4D /* NSObject+MJKeyValue.m in Sources */ = {isa = PBXBuildFile; fileRef = B6EE79901D18EC2800905F4D /* NSObject+MJKeyValue.m */; };
-		B6EE79B21D18F8E000905F4D /* compose_photo_close@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B6EE79B11D18F8E000905F4D /* compose_photo_close@2x.png */; };
-		B6EE79B41D191AC800905F4D /* emoticon_keyboard_background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B6EE79B31D191AC800905F4D /* emoticon_keyboard_background@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B63D84881DC97EA600FE9FBF /* EmotionIcons.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = EmotionIcons.bundle; sourceTree = "<group>"; };
 		B6E01F411C562A210028BE48 /* emotion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = emotion.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6E01F451C562A210028BE48 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B6E01F471C562A210028BE48 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -46,8 +34,6 @@
 		B6E01F501C562A210028BE48 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B6E01F531C562A210028BE48 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B6E01F551C562A210028BE48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B6E01F5D1C562A2A0028BE48 /* compose_emotion_delete_highlighted@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "compose_emotion_delete_highlighted@2x.png"; sourceTree = "<group>"; };
-		B6E01F5F1C562A2A0028BE48 /* compose_emotion_delete_highlighted@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "compose_emotion_delete_highlighted@3x.png"; sourceTree = "<group>"; };
 		B6E01F611C562A2A0028BE48 /* EmotionKeyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmotionKeyboard.h; sourceTree = "<group>"; };
 		B6E01F621C562A2A0028BE48 /* EmotionKeyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmotionKeyboard.m; sourceTree = "<group>"; };
 		B6E01F631C562A2A0028BE48 /* EmotionModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmotionModel.h; sourceTree = "<group>"; };
@@ -60,26 +46,6 @@
 		B6E01F7A1C562A2A0028BE48 /* UIButton+RemoveHighlightEffect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+RemoveHighlightEffect.m"; sourceTree = "<group>"; };
 		B6E01F7B1C562A2A0028BE48 /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
 		B6E01F7C1C562A2A0028BE48 /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
-		B6E01F8F1C562B7C0028BE48 /* EmotionIcons */ = {isa = PBXFileReference; lastKnownFileType = folder; path = EmotionIcons; sourceTree = "<group>"; };
-		B6E01F911C570B4C0028BE48 /* compose_emotion_delete@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "compose_emotion_delete@2x.png"; sourceTree = "<group>"; };
-		B6E01F921C570B4C0028BE48 /* compose_emotion_delete@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "compose_emotion_delete@3x.png"; sourceTree = "<group>"; };
-		B6EE79821D18EC2700905F4D /* MJConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJConst.h; sourceTree = "<group>"; };
-		B6EE79831D18EC2700905F4D /* MJConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJConst.m; sourceTree = "<group>"; };
-		B6EE79841D18EC2700905F4D /* MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJExtension.h; sourceTree = "<group>"; };
-		B6EE79851D18EC2700905F4D /* MJFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJFoundation.h; sourceTree = "<group>"; };
-		B6EE79861D18EC2700905F4D /* MJFoundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJFoundation.m; sourceTree = "<group>"; };
-		B6EE79871D18EC2700905F4D /* MJIvar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJIvar.h; sourceTree = "<group>"; };
-		B6EE79881D18EC2800905F4D /* MJIvar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJIvar.m; sourceTree = "<group>"; };
-		B6EE79891D18EC2800905F4D /* MJType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJType.h; sourceTree = "<group>"; };
-		B6EE798A1D18EC2800905F4D /* MJType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJType.m; sourceTree = "<group>"; };
-		B6EE798B1D18EC2800905F4D /* NSObject+MJCoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MJCoding.h"; sourceTree = "<group>"; };
-		B6EE798C1D18EC2800905F4D /* NSObject+MJCoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MJCoding.m"; sourceTree = "<group>"; };
-		B6EE798D1D18EC2800905F4D /* NSObject+MJIvar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MJIvar.h"; sourceTree = "<group>"; };
-		B6EE798E1D18EC2800905F4D /* NSObject+MJIvar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MJIvar.m"; sourceTree = "<group>"; };
-		B6EE798F1D18EC2800905F4D /* NSObject+MJKeyValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MJKeyValue.h"; sourceTree = "<group>"; };
-		B6EE79901D18EC2800905F4D /* NSObject+MJKeyValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MJKeyValue.m"; sourceTree = "<group>"; };
-		B6EE79B11D18F8E000905F4D /* compose_photo_close@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "compose_photo_close@2x.png"; sourceTree = "<group>"; };
-		B6EE79B31D191AC800905F4D /* emoticon_keyboard_background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "emoticon_keyboard_background@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,14 +103,7 @@
 		B6E01F5B1C562A2A0028BE48 /* EmotionKeyboard */ = {
 			isa = PBXGroup;
 			children = (
-				B6EE79811D18EC2700905F4D /* MJExtension */,
-				B6E01F8F1C562B7C0028BE48 /* EmotionIcons */,
-				B6E01F5D1C562A2A0028BE48 /* compose_emotion_delete_highlighted@2x.png */,
-				B6E01F5F1C562A2A0028BE48 /* compose_emotion_delete_highlighted@3x.png */,
-				B6E01F911C570B4C0028BE48 /* compose_emotion_delete@2x.png */,
-				B6E01F921C570B4C0028BE48 /* compose_emotion_delete@3x.png */,
-				B6EE79B11D18F8E000905F4D /* compose_photo_close@2x.png */,
-				B6EE79B31D191AC800905F4D /* emoticon_keyboard_background@2x.png */,
+				B63D84881DC97EA600FE9FBF /* EmotionIcons.bundle */,
 				B6E01F611C562A2A0028BE48 /* EmotionKeyboard.h */,
 				B6E01F621C562A2A0028BE48 /* EmotionKeyboard.m */,
 				B6E01F631C562A2A0028BE48 /* EmotionModel.h */,
@@ -159,28 +118,6 @@
 				B6E01F7C1C562A2A0028BE48 /* UIView+Extension.m */,
 			);
 			path = EmotionKeyboard;
-			sourceTree = "<group>";
-		};
-		B6EE79811D18EC2700905F4D /* MJExtension */ = {
-			isa = PBXGroup;
-			children = (
-				B6EE79821D18EC2700905F4D /* MJConst.h */,
-				B6EE79831D18EC2700905F4D /* MJConst.m */,
-				B6EE79841D18EC2700905F4D /* MJExtension.h */,
-				B6EE79851D18EC2700905F4D /* MJFoundation.h */,
-				B6EE79861D18EC2700905F4D /* MJFoundation.m */,
-				B6EE79871D18EC2700905F4D /* MJIvar.h */,
-				B6EE79881D18EC2800905F4D /* MJIvar.m */,
-				B6EE79891D18EC2800905F4D /* MJType.h */,
-				B6EE798A1D18EC2800905F4D /* MJType.m */,
-				B6EE798B1D18EC2800905F4D /* NSObject+MJCoding.h */,
-				B6EE798C1D18EC2800905F4D /* NSObject+MJCoding.m */,
-				B6EE798D1D18EC2800905F4D /* NSObject+MJIvar.h */,
-				B6EE798E1D18EC2800905F4D /* NSObject+MJIvar.m */,
-				B6EE798F1D18EC2800905F4D /* NSObject+MJKeyValue.h */,
-				B6EE79901D18EC2800905F4D /* NSObject+MJKeyValue.m */,
-			);
-			path = MJExtension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -241,14 +178,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B6E01F541C562A210028BE48 /* LaunchScreen.storyboard in Resources */,
-				B6EE79B41D191AC800905F4D /* emoticon_keyboard_background@2x.png in Resources */,
 				B6E01F511C562A210028BE48 /* Assets.xcassets in Resources */,
-				B6E01F901C562B7C0028BE48 /* EmotionIcons in Resources */,
-				B6E01F801C562A2A0028BE48 /* compose_emotion_delete_highlighted@3x.png in Resources */,
-				B6EE79B21D18F8E000905F4D /* compose_photo_close@2x.png in Resources */,
-				B6E01F7E1C562A2A0028BE48 /* compose_emotion_delete_highlighted@2x.png in Resources */,
-				B6E01F941C570B4C0028BE48 /* compose_emotion_delete@3x.png in Resources */,
-				B6E01F931C570B4C0028BE48 /* compose_emotion_delete@2x.png in Resources */,
+				B63D84891DC97EA600FE9FBF /* EmotionIcons.bundle in Resources */,
 				B6E01F4F1C562A210028BE48 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -260,17 +191,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B6EE79971D18EC2800905F4D /* NSObject+MJKeyValue.m in Sources */,
-				B6EE79951D18EC2800905F4D /* NSObject+MJCoding.m in Sources */,
-				B6EE79931D18EC2800905F4D /* MJIvar.m in Sources */,
 				B6E01F821C562A2A0028BE48 /* EmotionKeyboard.m in Sources */,
-				B6EE79921D18EC2800905F4D /* MJFoundation.m in Sources */,
-				B6EE79941D18EC2800905F4D /* MJType.m in Sources */,
 				B6E01F8C1C562A2A0028BE48 /* NSString+Emoji.m in Sources */,
 				B6E01F4C1C562A210028BE48 /* ViewController.m in Sources */,
 				B6E01F491C562A210028BE48 /* AppDelegate.m in Sources */,
-				B6EE79961D18EC2800905F4D /* NSObject+MJIvar.m in Sources */,
-				B6EE79911D18EC2800905F4D /* MJConst.m in Sources */,
 				B6E01F831C562A2A0028BE48 /* EmotionModel.m in Sources */,
 				B6E01F8D1C562A2A0028BE48 /* UIButton+RemoveHighlightEffect.m in Sources */,
 				B6E01F461C562A210028BE48 /* main.m in Sources */,
