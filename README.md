@@ -10,8 +10,7 @@
 
 <img src="./1.gif" width="320"><br/>
 
-直接把文件中的EmotionKeyboard文件添加到项目中即可,本项目依赖 [MJExtension](https://github.com/CoderMJLee/MJExtension),需要注意的是项目资源文件直接 Create folder reference 形式引入.
-<br/><img src="./2.png" width="320"><br/>
+直接把文件中的EmotionKeyboard文件添加到项目中即可
 
 ## 使用方法
 ### 提供4种创建方法
