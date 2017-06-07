@@ -50,6 +50,11 @@
     [self.view addSubview:inputView];
 }
 
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+
+    [self.view endEditing:YES];
+}
+
 - (void)btnClick
 {
 
