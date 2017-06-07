@@ -83,6 +83,8 @@
 
 + (UIImage *)emotionImageWithName:(NSString *)name;
 
++ (UIImage *)emotionImageWithPath:(NSString *)name;
+
 
 
 @end

@@ -8,9 +8,8 @@
 
 #import "EmotionKeyboard.h"
 #import "UIView+Extension.h"
-#import "EmotionModel.h"
 #import "UIButton+RemoveHighlightEffect.h"
-#import "EmotionTool.h"
+
 
 
 #define RGBCOLOR(r,g,b) [UIColor colorWithRed:(r)/255.0f green:(g)/255.0f blue:(b)/255.0f alpha:1]
@@ -870,11 +869,10 @@ typedef NS_ENUM(NSUInteger, EmotionToolBarButtonType) {
 
 - (instancetype)init{
     
-    self = [super initWithFrame:CGRectMake(0, ScreenH - 216, ScreenW, 216)];
+    self = [super initWithFrame:CGRectMake(0, ScreenH - 226, ScreenW, 226)];
     if (self) {
         
         self.backgroundColor = [UIColor colorWithPatternImage:[EmotionTool emotionImageWithName:@"emoticon_keyboard_background"]];
-        
         
         EmotionToolBar *toolBar = [[EmotionToolBar alloc] init];
 //        toolBar.Default = YES;
@@ -943,44 +941,44 @@ typedef NS_ENUM(NSUInteger, EmotionToolBarButtonType) {
  */
 - (void)emotionDidSelected:(NSNotification *)noti{
     EmotionButton *button = noti.object;
+   
+    UIButton *btn = (UIButton *)[self.toolBar viewWithTag:EmotionToolBarButtonTypeCollect];
+    UIButton *btn1 = (UIButton *)[self.toolBar viewWithTag:EmotionToolBarButtonTypeMagic];
+    BOOL isMagicEmotion = NO;
+    if (!btn.isEnabled) {
+//        NSLog(@"收藏图片");
+        if (button.imageUrl) {
+            NSString *path = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents/CollectImage"];
+            path = [path stringByAppendingPathComponent:button.imageUrl.lastPathComponent];
+            
+            if ([self.delegate respondsToSelector:@selector(emoticonCollectImageDidTapUrl:)]) {
+               
+                [self.delegate emoticonCollectImageDidTapUrl:path];
+            }
+  
+        }
+        
+    }else if (!btn1.isEnabled){
+//        NSLog(@"魔法表情");
+        isMagicEmotion = YES;
+        if (button.emotion) {
+            if ([self.delegate respondsToSelector:@selector(emoticonMagicEmotionDidTapText:)]) {
+                [self.delegate emoticonMagicEmotionDidTapText:button.emotion.chs];
+            }
+        }
+    }
+    
     NSString *text = nil;
     if (button.emotion.isEmoji) {
         text = button.titleLabel.text;
     }else{
         text = button.emotion.chs;
     }
-    if (text && [self.delegate respondsToSelector:@selector(emoticonInputDidTapText:)]) {
+    if (!isMagicEmotion && text && [self.delegate respondsToSelector:@selector(emoticonInputDidTapText:)]) {
         [self.delegate emoticonInputDidTapText:text];
     }
+//    isMagicEmotion = NO;
     
-    UIButton *btn = (UIButton *)[self.toolBar viewWithTag:EmotionToolBarButtonTypeCollect];
-    UIButton *btn1 = (UIButton *)[self.toolBar viewWithTag:EmotionToolBarButtonTypeMagic];
-    
-    if (!btn.isEnabled) {
-        NSLog(@"收藏图片");
-        if (button.imageUrl) {
-            NSString *path = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents/CollectImage"];
-            path = [path stringByAppendingPathComponent:button.imageUrl.lastPathComponent];
-            
-            if ([self.delegate respondsToSelector:@selector(emoticonImageDidTapUrl:)]) {
-               
-                [self.delegate emoticonImageDidTapUrl:path];
-            }
-  
-        }
-        
-    }else if (!btn1.isEnabled){
-        NSLog(@"魔法表情");
-        
-        if (button.imageUrl) {
-            
-            if ([self.delegate respondsToSelector:@selector(emoticonImageDidTapUrl:)]) {
-                
-                [self.delegate emoticonImageDidTapUrl:button.imageUrl];
-            }
-            
-        }
-    }
 
 }
 

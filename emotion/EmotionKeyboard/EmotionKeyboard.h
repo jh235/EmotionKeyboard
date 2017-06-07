@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "NSString+Emoji.h"
+#import "EmotionTool.h"
+#import "EmotionModel.h"
 
 /**
  *  屏幕宽度
@@ -28,11 +30,17 @@
 - (void)emoticonInputDidTapText:(NSString *)text;
 
 /**
- *  获取图片表情对应的url
+ *  获取收藏图片表情对应的url
  *
  *  @param url 图片路径
  */
-- (void)emoticonImageDidTapUrl:(NSString *)url;
+- (void)emoticonCollectImageDidTapUrl:(NSString *)url;
+/**
+ *  获取魔法图片表情对应的url
+ *
+ *  @param url 图片路径
+ */
+- (void)emoticonMagicEmotionDidTapText:(NSString *)text;
 
 /**
  *  删除表情

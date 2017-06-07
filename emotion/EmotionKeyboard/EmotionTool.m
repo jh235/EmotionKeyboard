@@ -140,6 +140,21 @@ static NSMutableArray *_collectImages;
     return [UIImage imageWithContentsOfFile:path];
 }
 
++ (UIImage *)emotionImageWithPath:(NSString *)name{
+    
+    NSString *bundlePath = [[NSBundle mainBundle]pathForResource:@"EmotionIcons.bundle" ofType:nil];
+    NSBundle *bundle = [NSBundle bundleWithPath:bundlePath];
+    
+    name = name.stringByDeletingPathExtension;
+    
+    NSLog(@"%@",bundle);
+    
+    NSString *path = [bundle pathForResource:[NSString stringWithFormat:@"%@@2x",name] ofType:@"png"];
+
+    return [UIImage imageWithContentsOfFile:path];
+    
+}
+
 
 + (NSArray *)defaultEmotions{
     //读取默认表情
